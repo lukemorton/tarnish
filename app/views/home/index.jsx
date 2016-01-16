@@ -7,7 +7,7 @@ function PostSummary(postSummary) {
 }
 
 function PostSummaries(postSummaries) {
-  return map(postSummaries, PostSummary);
+  return postSummaries.map(PostSummary);
 }
 
 export default function Index({ postSummaries }) {
