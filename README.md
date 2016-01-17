@@ -2,7 +2,7 @@
 
 > Your silverware needs a polish.
 
-A framework for a new generation.
+An example application for a new generation.
 
 Highly opinionated.
 
