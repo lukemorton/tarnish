@@ -4,11 +4,14 @@
 
 An example application for a new generation.
 
-Highly opinionated.
+## Goals
 
-Serverless.
+ - Make developers more productive
+ - Provide a sensible set of defaults
+ - Prefer serverless, offline first approaches
+ - Encourage testing
 
-Unapologetic.
+## Working with it
 
 ```
 npm install -g tarnish
