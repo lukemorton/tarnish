@@ -9,3 +9,17 @@ Highly opinionated.
 Serverless.
 
 Unapologetic.
+
+```
+npm install -g tarnish
+npm install
+tarnish dev
+```
+
+```
+tarnish spec
+```
+
+```
+tarnish deploy
+```
