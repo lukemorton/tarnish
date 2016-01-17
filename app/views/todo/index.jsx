@@ -7,6 +7,6 @@ export default function Index(state) {
         <Field name="task" />
         <Submit>Add</Submit>
       </Form>
-    )
+    );
   });
 }
