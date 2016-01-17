@@ -1,5 +1,5 @@
-import { actions } from 'tarnish';
-const { json, convertKeysToSnakeCase, convertKeysToCamelCase } = actions.middleware;
+import { actions, actionMiddleware } from 'tarnish';
+const { json, convertKeysToSnakeCase, convertKeysToCamelCase } = actionMiddleware;
 
 export function loadPostSummaries() {
   return actions.get('https://api/post_summaries.json', [json, convertKeysToCamelCase]);
