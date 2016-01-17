@@ -29,6 +29,7 @@ tarnish deploy
 
 ## Some early decisions
 
+ - The framework won't be called tarnish
  - To reduce bullshit JS boilerplate we will leverage globals with browserify
  - Autoloading based on directory structure will be used to tie things together
  - Not including a file should simply mean default behaviours apply, for example
