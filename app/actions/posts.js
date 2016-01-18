@@ -7,7 +7,7 @@ export function loadPostSummaries() {
 }
 
 export function createPost(post) {
-  return actions.chain(actions.convert.keysToSnakeCase(post)
+  return actions.chain(actions.convert.keysToSnakeCase(post),
                        actions.http.postJson('https://api/post_summaries.json'),
                        actions.convert.keysToCamelCase);
 }
