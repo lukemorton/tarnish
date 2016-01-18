@@ -1,11 +1,12 @@
 import { actions } from 'tarnish';
 
 function handleResponse(form) {
-  return function (session) {
-    if (session.errors) {
-      return actions.form.validationErrors(form, session.errors);
+  return function ({ token, errors }) {
+    if (errors) {
+      return actions.form.validationErrors(form, errors);
     } else {
-      return actions.router.redirectTo('home#Index');
+      return actions.chain(actions.state.merge({ token }),
+                           actions.router.redirectTo('home#Index'));
     }
   };
 }
