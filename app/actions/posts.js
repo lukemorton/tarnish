@@ -2,11 +2,12 @@ import { actions, actionMiddleware } from 'tarnish';
 const { json, convertKeysToSnakeCase, convertKeysToCamelCase } = actionMiddleware;
 
 export function loadPostSummaries() {
-  return actions.http.get('https://api/post_summaries.json', [json, convertKeysToCamelCase]);
+  return actions.chain(actions.http.getJson('https://api/post_summaries.json'),
+                       actions.convert.keysToCamelCase);
 }
 
 export function createPost(post) {
-  const url = 'https://api/post_summaries.json';
-  return actions.http.post(url, post, [convertKeysToSnakeCase, json],
-                                      [json, convertKeysToCamelCase]);
+  return actions.chain(actions.convert.keysToSnakeCase(post)
+                       actions.http.postJson('https://api/post_summaries.json'),
+                       actions.convert.keysToCamelCase);
 }
