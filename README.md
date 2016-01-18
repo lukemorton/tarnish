@@ -2,8 +2,6 @@
 
 > Your silverware needs a polish.
 
-An example application for a new generation.
-
 ## Goals
 
  - Make developers more productive
