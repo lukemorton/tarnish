@@ -1,8 +1,8 @@
 import { routes, pageRoute } from 'tarnish';
 
 export default routes([
-  ['/', pageRoute('home#Index', ['loadPostSummaries'])],
-  ['/sessions/new', pageRoute('sessions#New')],
-  ['/toggling', pageRoute('toggling#Index')],
-  ['/todo', pageRoute('todo#Index')],
+  pageRoute('/',             { to: 'home#Index', actions: ['loadPostSummaries'] }),
+  pageRoute('/sessions/new', { to: 'sessions#New' }),
+  pageRoute('/toggling',     { to: 'toggling#Index' }),
+  pageRoute('/todo',         { to: 'todo#Index' }),
 ]);
