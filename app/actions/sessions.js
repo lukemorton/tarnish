@@ -5,8 +5,7 @@ function handleResponse(form) {
     if (errors) {
       return actions.form.validationErrors(form, errors);
     } else {
-      return actions.chain(actions.state.merge({ token }),
-                           actions.router.redirectTo('home#Index'));
+      return actions.state.merge({ page: 'home#Index', token });
     }
   };
 }
