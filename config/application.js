@@ -1,3 +1,6 @@
-import { appConfig } from 'tarnish';
+import { appConfig, actionMiddleware } from 'tarnish';
 
-export default appConfig({ root: `${__dirname}/../` });
+export default appConfig({
+  root: `${__dirname}/../`,
+  actions: { http: { middleware: [actionMiddleware.serverSideSnakeCaseKeys] } }
+});
