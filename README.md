@@ -7,6 +7,7 @@
  - Make developers more productive
  - Provide a sensible set of defaults
  - Prefer serverless, offline first approaches
+ - Provide isomorphic support for first page load
  - Encourage testing
 
 ## Working with it
