@@ -5,7 +5,7 @@
 ## Goals
 
  - Make developers more productive
- - Provide a sensible set of defaults
+ - Provide structure and consistency to newcomers
  - Prefer serverless, offline first approaches
  - Provide isomorphic support for first page load
  - Encourage testing
